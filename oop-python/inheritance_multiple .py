@@ -1,7 +1,7 @@
-# Multi level Inheritance
+# Multiple Inheritance
 
 
-class A: # parent class
+class A: # class A
 
     def feature1(self):
         print("Feature 1 working")
@@ -10,7 +10,7 @@ class A: # parent class
         print("Feature 2 working")
 
 
-class B(A): # class B inherit all the feature of class A
+class B: # class B
 
     def feature3(self):
         print("Feature 3 working")
@@ -19,7 +19,7 @@ class B(A): # class B inherit all the feature of class A
         print("Feature 4 working")
 
 
-class C(B): # Class C inherit all the features of class B which inherits the features of Class A
+class C(A,B): # Class C inherit all the features of class A and Class B
     def feature5(self):
         print("Feature 5 working")
 
@@ -30,8 +30,6 @@ a1.feature1()
 a1.feature2()
 
 b1 = B() # Object b1
-b1.feature1() # class B inherit the feature of class A
-b1.feature2() # class B inherit the feature of class A
 b1.feature3()
 b1.feature4()
 
